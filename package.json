@@ -1,0 +1,25 @@
+{
+  "name": "ts7-project-template",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "check": "tsc",
+    "lint": "oxlint --type-aware --deny-warnings src",
+    "test": "node --test 'test/*.test.ts'",
+    "format": "prettier --write src test",
+    "format:check": "prettier --check src test",
+    "build": "tsc -p tsconfig.build.json",
+    "verify": "npm run check && npm run lint && npm test && npm run format:check && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "25.9.9",
+    "oxlint": "1.89.0",
+    "oxlint-tsgolint": "7.0.2004",
+    "prettier": "3.9.10",
+    "typescript": "7.0.2"
+  }
+}

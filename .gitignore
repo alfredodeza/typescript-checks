@@ -1,0 +1,5 @@
+# Installed packages: npm ci puts them back from package-lock.json.
+node_modules/
+# Build output: npm run build writes it again.
+dist/
+*.tsbuildinfo
